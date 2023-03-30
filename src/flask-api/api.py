@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
 
+#Retourne du texte en attendant de retourner du JSON
+
+#Route pour la page de bienvenue
 @app.route("/")
 def hello():
     return "Hello, API!"

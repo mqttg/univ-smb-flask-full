@@ -12,3 +12,4 @@ sudo mysql -e "GRANT ALL ON *.* TO 'identity'@'localhost' IDENTIFIED BY 'passwor
 sudo mysql -e "GRANT ALL ON *.* TO 'config_generator'@'localhost' IDENTIFIED BY 'passwordDbUniv01' WITH GRANT OPTION;"
 # Make our changes take effect
 sudo mysql -e "FLUSH PRIVILEGES"
+

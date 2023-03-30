@@ -2,6 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
 
+#Template de liste : alias.html
+
+#Retourne du texte en attendant d'avoir des .html
+
+#Route pour la bage d'acceuil
 @app.route("/")
 def start(): 
     return render_template('start.html')
@@ -19,7 +24,8 @@ def logout():
 # Route pour la liste des profils utilisateur
 @app.route('/list_profile')
 def list_profile():
-    return 'Liste des profils utilisateur'
+    #return 'Liste des profils utilisateur'
+    return render_template('alias.html')
 
 # Route pour afficher le profil d'un utilisateur en particulier
 @app.route('/profile/<username>')
@@ -29,12 +35,14 @@ def profile(username):
 # Route pour la liste complète de toutes les configurations
 @app.route('/list_all')
 def list_all():
-    return 'Liste complète de toutes les configurations'
+    #return 'Liste complète de toutes les configurations'
+    return render_template('alias.html')
 
 # Route pour la liste des Load Balancer
 @app.route('/lib/list')
 def lib_list():
-    return 'Liste des Load Balancer'
+    #return 'Liste des Load Balancer'
+    return render_template('alias.html')
 
 # Route pour afficher la configuration d'un Load Balancer en particulier
 @app.route('/lib/<id>')
@@ -59,7 +67,8 @@ def lb_delete(id):
 # Route pour la liste des Reverse Proxy
 @app.route('/rp/list')
 def rp_list():
-    return 'Liste des Reverse Proxy'
+    #return 'Liste des Reverse Proxy'
+    return render_template('alias.html')
 
 # Route pour afficher la configuration d'un Reverse Proxy en particulier
 @app.route('/rp/<id>')
@@ -84,7 +93,8 @@ def rp_delete(id):
 # Route pour la liste des serveurs Web
 @app.route('/ws/list')
 def ws_list():
-    return 'Liste des serveurs Web'
+    #return 'Liste des serveurs Web'
+    return render_template('alias.html')
 
 # Route pour afficher la configuration d'un serveur Web en particulier
 @app.route('/ws/<id>')

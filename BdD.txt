@@ -1,0 +1,19 @@
+#A remettre à chaque fois qu'on ouvre Gitpod
+
+# Se connecter à la BdD
+sudo mysql -u root -p
+
+SHOW DATABASES;
+CREATE DATABASE IF NOT EXISTS identity;
+CREATE DATABASE IF NOT EXISTS config_generator;
+CREATE DATABASE IF NOT EXISTS load_banlancer;
+
+USE identity;
+CREATE TABLE username ( username VARCHAR(255), encrypted_password VARCHAR(255));
+CREATE TABLE identity ( username VARCHAR(255), firstname VARCHAR(255), lastname VARCHAR(255), mail VARCHAR(255), date_of_birth DATE);
+
+USE config_generator;
+CREATE TABLE lb_config ();
+CREATE TABLE rp_config;
+CREATE TABLE ws_config;
+
